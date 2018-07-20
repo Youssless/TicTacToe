@@ -128,11 +128,17 @@ public class TicTacToe
         {
             if (board[row][column] == naught)
                 return true;
+
+            if (board[row][column] == cross)
+                return true;
         }
 
         if (turn == 2)
         {
             if (board[row][column] == cross)
+                return true;
+
+            if (board[row][column] == naught)
                 return true;
         }
 
@@ -158,20 +164,23 @@ public class TicTacToe
     }
 
 
-    public void setRow(int row) {
+    public void setRow(int row)
+    {
         this.row = row;
     }
 
-
-    public void setColumn(int column) {
+    public void setColumn(int column)
+    {
         this.column = column;
     }
 
-    public int getTurn() {
+    public int getTurn()
+    {
         return turn;
     }
 
-    public void setTurn(int turn) {
+    public void setTurn(int turn)
+    {
         this.turn = turn;
     }
 }
